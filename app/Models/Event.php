@@ -9,6 +9,6 @@ class Event extends Model
 {
 
     public function getWorkShops() {
-        return $this->belongsTo(Workshop::class, 'event_id');
+        return $this->hasMany(Workshop::class, 'event_id');
     }
 }
