@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
 
-    public function workShops() {
+    public function getWorkShops() {
         return $this->belongsTo(Workshop::class, 'event_id');
     }
 }

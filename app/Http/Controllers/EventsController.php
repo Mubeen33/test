@@ -104,7 +104,7 @@ class EventsController extends BaseController
     public function getEventsWithWorkshops() {
         // throw new \Exception('implement in coding task 1');
 
-        return Event::with('workShops')->get();
+        return Event::with('getWorkShops')->get();
     }
 
 
@@ -184,6 +184,6 @@ class EventsController extends BaseController
     public function getFutureEventsWithWorkshops() {
         // throw new \Exception('implement in coding task 2');
         $today = Carbon::today();
-        return Event::with('workShops')->whereRelation('start','>',$today)->get();
+        return Event::with('getWorkShops')->whereRelation('start','>',$today)->get();
     }
 }
